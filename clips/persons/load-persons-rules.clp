@@ -29,5 +29,8 @@
 
 
 ;; Defining a rule for finding male persons, older than 20 years, and printing their names
+(defrule my-rule6
+      ?p <- (person (gender male)(name ?x)(age ?a))(test(> ?a 20))=> (printout t ?p ?x " - " ?a crlf))
+
 
 
